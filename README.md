@@ -4,6 +4,7 @@
 My personal configuration files for a Linux setup. I use [gnu stow](https://www.gnu.org/software/stow/) to manage the files.
 This repo mimics the structure of a user home directory and exists in *$HOME/.dotfiles*.
 
+![desktop example](./desktop-example.png)
 
 ## Stow
 This repo is setup to use stow.
