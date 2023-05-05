@@ -27,6 +27,8 @@ local plugins = {
 
   -- Telescope
   "nvim-telescope/telescope.nvim",
+
+  { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
 }
 
 -- Install lazy installer if doesnt exist
