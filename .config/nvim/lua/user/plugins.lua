@@ -25,7 +25,8 @@ local plugins = {
   "williamboman/mason-lspconfig.nvim",
   "jose-elias-alvarez/null-ls.nvim",
 
-
+  -- Telescope
+  "nvim-telescope/telescope.nvim",
 }
 
 -- Install lazy installer if doesnt exist
