@@ -1,5 +1,7 @@
+-- this config manages the compare menu noticed in IDEs
 local cmp = require 'cmp'
 
+-- 'kinds' are the symbols in the compare menu
 local kind_icons = {
   Text = "",
   Method = "m",
@@ -45,8 +47,8 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
       ["<C-k>"] = cmp.mapping.select_prev_item(),
 		  ["<C-j>"] = cmp.mapping.select_next_item(),
-      ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-2), {"i", "c"}),
-      ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(2),  {"i", "c"}),
+      ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-2), {"i", "c"}),
+      ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(2),  {"i", "c"}),
       ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(),  {"i", "c"}),
       ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       ['<C-e>'] = cmp.mapping {
@@ -61,6 +63,8 @@ cmp.setup({
         vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
         -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
         vim_item.menu = ({
+          nvim_lsp = "[LSP]",
+          nvim_lua = "[NVIM_LUA]",
           luasnip = "[Snippet]",
           buffer = "[Buffer]",
           path = "[Path]",
@@ -69,7 +73,8 @@ cmp.setup({
       end,
     },
     sources = cmp.config.sources({
-      -- { name = 'nvim_lsp' },
+      { name = 'nvim_lsp' },
+      { name = 'nvim_lua' },
       { name = 'luasnip' }, -- For luasnip users.
       { name = 'buffer' }, -- For luasnip users.
       { name = 'path' }, -- For luasnip users.

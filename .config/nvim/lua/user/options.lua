@@ -1,5 +1,3 @@
-local colorscheme = "tokyonight"
-
 -- :help options
 local options = {
   backup = false,                          -- creates a backup file
@@ -30,8 +28,9 @@ local options = {
   cursorline = true,                       -- highlight the current line
   number = false,                          -- set numbered lines
   relativenumber = false,                  -- set relative numbered lines
-  numberwidth = 4,                         -- set number column width to 2 {default 4}
+  numberwidth = 2,                         -- set number column width to 2 {default 4}
   wrap = false,                            -- display lines as one long line
+  signcolumn = "yes",
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
 }
