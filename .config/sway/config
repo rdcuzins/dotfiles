@@ -1,0 +1,53 @@
+# Read `man 5 sway` for a complete reference.
+
+### Variables
+include "$HOME/.cache/wal/colors-sway"
+client.focused $color0 $background $foreground $color7 $background
+# The $wallpaper var comes from included wal file that is cached
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+output * bg $wallpaper fill
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Terminal choice
+set $term foot
+set $rofi_cmd rofi -terminal '$term'
+# Combine list of the apps with desktop files and executables from PATH.
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+
+gaps inner 2
+smart_gaps on
+default_border pixel 3
+hide_edge_borders smart
+
+set $ws0 0 󰢁
+set $ws1 1 
+set $ws2 2 󰈹
+set $ws3 3 󰍡
+set $ws4 4 
+set $ws5 5 
+set $ws6 6 
+set $ws7 7 
+set $ws8 8 
+set $ws9 9 
+
+# TODO: move swaylock to own config
+set $locking swaylock --daemonize \
+     --color "$color1" --inside-color \
+     "$color1" --inside-clear-color "$foreground" \
+     --ring-color "$color2" --ring-clear-color "$color11" \
+     --ring-ver-color "$color13" --show-failed-attempts \
+     --fade-in 0.2 --grace 2 --effect-vignette 0.5:0.5 \
+     --effect-blur 7x5 --ignore-empty-password --screenshots --clock
+
+set $idle_timeout 240
+set $locking_timeout 300
+set $screen_timeout 600
+
+include "/etc/sway/config.d/*.conf"
+include "$HOME/.config/sway/modes/*.conf"
+include "$HOME/.config/sway/config.d/*.conf" 
