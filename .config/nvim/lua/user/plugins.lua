@@ -2,6 +2,7 @@ local plugins = {
   "folke/which-key.nvim",         -- tooltip popup menu
   "nvim-lua/popup.nvim",          -- An implementation of the Popup API from vim in Neovim
   "nvim-lua/plenary.nvim",        -- Useful lua functions used by lots of plugins
+  "windwp/nvim-autopairs",        -- smart autoclose of brackets and quotations 
 
   -- colorschemes
   "folke/tokyonight.nvim",
@@ -29,6 +30,7 @@ local plugins = {
   "nvim-telescope/telescope.nvim",
 
   { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
+
 }
 
 -- Install lazy installer if doesnt exist
