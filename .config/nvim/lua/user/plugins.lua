@@ -3,6 +3,7 @@ local plugins = {
   "nvim-lua/popup.nvim",          -- An implementation of the Popup API from vim in Neovim
   "nvim-lua/plenary.nvim",        -- Useful lua functions used by lots of plugins
   "windwp/nvim-autopairs",        -- smart autoclose of brackets and quotations 
+  "numToStr/Comment.nvim",        -- gcc smart comments
 
   -- colorschemes
   "folke/tokyonight.nvim",
@@ -29,7 +30,10 @@ local plugins = {
   -- Telescope
   "nvim-telescope/telescope.nvim",
 
-  { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
+  -- Treesitter
+  { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", },
+  -- context aware gcc comments
+  "JoosepAlviste/nvim-ts-context-commentstring",
 
 }
 
