@@ -5,6 +5,10 @@ local plugins = {
   "windwp/nvim-autopairs",        -- smart autoclose of brackets and quotations 
   "numToStr/Comment.nvim",        -- gcc smart comments
 
+  -- git
+  "lewis6991/gitsigns.nvim",
+  "kdheepak/lazygit.nvim",
+
   -- colorschemes
   "folke/tokyonight.nvim",
 
