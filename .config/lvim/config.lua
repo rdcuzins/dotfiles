@@ -1,0 +1,6 @@
+-- Read the docs: https://www.lunarvim.org/docs/configuration
+-- Forum: https://www.reddit.com/r/lunarvim/
+-- Discord: https://discord.com/invite/Xb9B4Ny
+--
+-- Generate Defaults File (run from .config/lvim):
+-- lvim --headless +'lua require("lvim.utils").generate_settings()' +qa && sort -o lv-settings.lua{,}

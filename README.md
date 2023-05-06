@@ -58,14 +58,11 @@ I finally decided to use [NeoVim](https://neovim.io/) because I like LUA and
 it seems more useful than vimscript. [Computercraft](https://www.computercraft.info/)
 prepared me for this moment.
 
-> :information_source: Currently using [astrovim](https://github.com/AstroNvim/AstroNvim) but will build
-my own from scratch soon. Not all requirements are listed.
+> :information_source: Currently using [LunarVim](https://www.lunarvim.org/) as a base.
+
+Install Nightly Build:
+```shell
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)`
+```
 
 Requirements:
-- gem: neovim
-- pip: pynvim
-- lazygit
-- ruby-devel
-- ripgrep
-- fd-find
-- node
