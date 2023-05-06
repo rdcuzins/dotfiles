@@ -29,6 +29,7 @@ alias gb="git rev-parse --abbrev-ref HEAD"
 alias vz="$EDITOR $HOME/.zshrc"
 alias vb="$EDITOR $HOME/.bashrc"
 alias chmox="chmod +x"
+alias lg="lazygit"
 
 if command -v bat &>/dev/null; then
   alias cat='bat -pp --theme "Visual Studio Dark+"'
