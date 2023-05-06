@@ -5,7 +5,7 @@ local servers = {
   "puppet",
   "terraformls",
   "ruby_ls",
-  "bashls"
+  "bashls",
 }
 
 local settings = {
@@ -27,7 +27,7 @@ require("mason-lspconfig").setup({
 	automatic_installation = true,
 })
 
-lspconfig = require("lspconfig")
+local lspconfig = require("lspconfig")
 local opts = {}
 
 for _, server in pairs(servers) do
@@ -47,3 +47,5 @@ for _, server in pairs(servers) do
 
 	lspconfig[server].setup(opts)
 end
+
+lspconfig.gdscript.setup(opts)

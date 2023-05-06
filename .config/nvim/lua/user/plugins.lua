@@ -27,6 +27,9 @@ local plugins = {
   "williamboman/mason-lspconfig.nvim",
   "jose-elias-alvarez/null-ls.nvim",
 
+  -- godot
+  "mfussenegger/nvim-dap",
+
   -- Telescope
   "nvim-telescope/telescope.nvim",
 
