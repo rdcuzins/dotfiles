@@ -8,6 +8,7 @@
 lvim.plugins = {
   -- When adding config = {} it calls the usual require('foo').setup{}
   {"folke/todo-comments.nvim", config ={} },
+  {'lukoshkin/trailing-whitespace'},
 }
 
 vim.diagnostic.config({
